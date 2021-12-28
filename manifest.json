@@ -1,0 +1,20 @@
+{
+    "name": "Placement Cell, JGEC",
+    "description": "Extension that helps in sending mail invitations to  Orgs for Campus Drives",
+    "version": "1.1",
+    "content_scripts": [
+      {
+        "matches": [
+          "https://mail.google.com/*",
+          "https://inbox.google.com/*"
+        ],
+        "js": ["inboxsdk.js","content.js"],
+        "run_at": "document_end"
+      }
+    ],
+    "permissions": [
+      "https://mail.google.com/",
+      "https://inbox.google.com/"
+    ],
+    "manifest_version": 2
+  }
